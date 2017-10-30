@@ -1,0 +1,97 @@
+header {
+
+    .nav-wrapper {
+        .main-wrapper {
+
+        }
+
+        .main, .lang {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+    }
+
+    .lang {
+        position: relative;
+        cursor: pointer;
+        margin-left: 28px;
+        text-transform: uppercase;
+        color: #ABABAB;
+        font-weight: bold;
+        @include transition(all 0.25s);
+
+        &:hover {
+            color: $color-red;
+        }
+
+        &:before {
+            content: '';
+            width: 1px;
+            height: 26px;
+            background: #BDBDBD;
+            position: absolute;
+            top: -1px;
+            left: -30px;
+        }
+        ul {
+            visibility: hidden;
+            opacity: 0;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 58px;
+            left: 7px;
+            z-index: 14;
+            text-align: left;
+            background: rgba(255, 255, 255, 1);
+            width: 100%;
+            border-radius: $border-radius;
+            //box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.12);
+            li {
+                padding: 0;
+                margin: 0;
+                color: #FFFFFF;
+                text-align: center;
+                &:hover {
+                    background: $color-red;
+                    @include transition(all 0.25s);
+                    a {
+                        color: #ffffff;
+                    }
+                }
+                a {
+                    display: block;
+                    padding: 10px;
+                    color: $paragraph-color;
+                }
+            }
+
+            &.done {
+                top: 38px;
+                opacity: 1;
+            }
+        }
+
+        [class*="current-"] {
+            line-height: 20px;
+
+            .icon-lang {
+                margin-right: 16px;
+                font-size: 22px;
+                line-height: 21px;
+                vertical-align: middle;
+                margin-bottom: 3px;
+                display: inline-block;
+                color: $color-red;
+            }
+
+            .icon-down {
+                margin-left: 8px;
+                font-size: 12px;
+                line-height: 20px;
+                vertical-align: middle;
+            }
+        }
+    }
+}

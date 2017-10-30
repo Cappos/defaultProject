@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'lamello';
+  src:  url('fonts/lamello.eot?7vx5z');
+  src:  url('fonts/lamello.eot?7vx5z#iefix') format('embedded-opentype'),
+    url('fonts/lamello.ttf?7vx5z') format('truetype'),
+    url('fonts/lamello.woff?7vx5z') format('woff'),
+    url('fonts/lamello.svg?7vx5z#lamello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'lamello' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fax:before {
+  content: "\46";
+}
+.icon-users:before {
+  content: "\55";
+}
+.icon-downloadCircle:before {
+  content: "\61";
+}
+.icon-photo:before {
+  content: "\49";
+}
+.icon-globe:before {
+  content: "\67";
+}
+.icon-star:before {
+  content: "\57";
+}
+.icon-newsletter:before {
+  content: "\58";
+}
+.icon-pdfCircle:before {
+  content: "\47";
+}
+.icon-partner:before {
+  content: "\56";
+}
+.icon-video:before {
+  content: "\4d";
+}
+.icon-zip:before {
+  content: "\52";
+}
+.icon-partners:before {
+  content: "\e900";
+}
+.icon-order:before {
+  content: "\6f";
+}
+.icon-down:before {
+  content: "\64";
+}
+.icon-left:before {
+  content: "\6c";
+}
+.icon-right:before {
+  content: "\72";
+}
+.icon-up:before {
+  content: "\75";
+}
+.icon-box:before {
+  content: "\62";
+}
+.icon-check:before {
+  content: "\63";
+}
+.icon-download:before {
+  content: "\44";
+}
+.icon-finder:before {
+  content: "\66";
+}
+.icon-close-light:before {
+  content: "\43";
+}
+.icon-hands:before {
+  content: "\68";
+}
+.icon-info:before {
+  content: "\69";
+}
+.icon-lang:before {
+  content: "\4c";
+}
+.icon-news:before {
+  content: "\6e";
+}
+.icon-mail:before {
+  content: "\6d";
+}
+.icon-next:before {
+  content: "\4e";
+}
+.icon-pdf:before {
+  content: "\70";
+}
+.icon-phone:before {
+  content: "\74";
+}
+.icon-pin:before {
+  content: "\50";
+}
+.icon-play:before {
+  content: "\76";
+}
+.icon-quotes-open:before {
+  content: "\71";
+}
+.icon-quotes-close:before {
+  content: "\7a";
+}
+.icon-diagram:before {
+  content: "\73";
+}
+.icon-storelocator:before {
+  content: "\53";
+}
+.icon-wishlist:before {
+  content: "\77";
+}
+.icon-close:before {
+  content: "\78";
+}
+.icon-zoom:before {
+  content: "\5a";
+}

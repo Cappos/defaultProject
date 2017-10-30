@@ -1,0 +1,106 @@
+// IE 8 MESSAGE
+.ie-message {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    padding-top: 100px;
+    background: #ffffff;
+    text-align: center;
+    h4 {
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        width: 100%;
+        display: block;
+
+    }
+}
+
+// SPECIFIC
+body {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.container {
+    max-width: 1350px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.responsive-img {
+    display: none;
+}
+
+// IMAGE HOVER
+.img-wrapper {
+    a {
+        display: inline-block;
+        position: relative;
+
+        &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: transparentize($color-red, .2);
+            opacity: 0;
+        }
+
+        &:after {
+            content: "\4e";
+            font-family: $icon-font-family;
+            font-size: 44px;
+            color: #ffffff;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            margin-top: -22px;
+            margin-left: -22px;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &:hover {
+
+        a {
+
+            &:before {
+                opacity: 1;
+            }
+
+            &:after {
+                visibility: visible;
+                opacity: 1;
+                top: 50%;
+            }
+        }
+    }
+}
+
+// RELATED FILES
+.file-item {
+    margin-bottom: 10px;
+
+    [class*="icon-"] {
+        font-size: 32px;
+        color: $color-red;
+        margin-right: 12px;
+        vertical-align: middle;
+        display: inline-block;
+    }
+    a {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 70%;
+        width: calc(100% - 45px);
+    }
+}

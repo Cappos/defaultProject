@@ -1,0 +1,45 @@
+.btn {
+    min-width: 140px;
+    height: 43px;
+    border: none;
+    text-align: left;
+    line-height: 43px;
+    padding: 0 24px;
+    cursor: pointer;
+    border-radius: $border-radius;
+    display: inline-block;
+
+    [class*="icon-"] {
+        vertical-align: middle;
+        margin-left: 32px;
+    }
+    &.more {
+        border: 1px solid $color-black;
+        color: #535353;
+        font-size: 13px;
+
+        &:hover {
+            background: $color-red;
+            border-color: $color-red;
+            color: #fff;
+        }
+    }
+
+    &.back {
+        border: 1px solid $color-black;
+        color: #535353;
+        font-size: 13px;
+        margin-top: 50px;
+        &:hover {
+            background: $color-red;
+            border-color: $color-red;
+            color: #fff;
+        }
+
+        [class*="icon-"] {
+            vertical-align: middle;
+            margin-left: 0;
+            margin-right: 32px;
+        }
+    }
+}

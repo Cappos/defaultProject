@@ -1,0 +1,218 @@
+.flex-viewport {
+
+    .flex-control-nav {
+        bottom: 20px;
+        left: 0;
+        text-align: center;
+        width: 100%;
+
+        li {
+            margin: 0 4px;
+            a {
+                background: #FEFEFE;
+                &.flex-active {
+                    background: $color-red;
+                }
+            }
+        }
+    }
+
+    .flex-direction-nav {
+        li {
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+            vertical-align: top;
+
+            &:before {
+                display: none;
+            }
+
+            a {
+                margin: 0;
+                opacity: 1;
+                text-indent: -99999px;
+                display: block;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-top: -9px;
+                    margin-left: -5px;
+                    text-indent: 0;
+                    font-family: $icon-font-family;
+                    font-size: 24px;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .flex-nav-prev {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            margin-top: -25px;
+
+            a {
+                &:before {
+                    content: $icon-left;
+                }
+            }
+        }
+        .flex-nav-next {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            margin-top: -25px;
+
+            a {
+                &:before {
+                    content: $icon-right;
+                }
+            }
+        }
+    }
+}
+
+.slider {
+    position: relative;
+
+    .slider-item {
+        position: relative;
+
+        .slider-text {
+            position: absolute;
+            left: 0;
+            top: 20%;
+            width: 100%;
+        }
+    }
+}
+
+.gallery-slider {
+    margin-bottom: 24px;
+
+    .gallery-item {
+        text-align: center;
+        position: relative;
+
+        a {
+            display: inline-block;
+            position: relative;
+        }
+
+        [class*='icon-'] {
+            width: 55px;
+            height: 55px;
+            background: $color-red;
+            line-height: 55px;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            @include transition(0.25s linear);
+            &:hover {
+                background: $color-gray;
+            }
+        }
+
+        .no-icon {
+            [class*="icon-"] {
+                display: none;
+            }
+        }
+    }
+}
+
+.gallery-carousel {
+    position: relative;
+    border-bottom: $default-border;
+    padding-bottom: 10px;
+
+    .carousel-item {
+        cursor: pointer;
+        position: relative;
+
+        &:after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: transparentize($color-red, .2);
+            opacity: 0;
+            @include transition(0.25s, linear);
+        }
+
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    .youtube-video {
+        position: relative;
+        &:after {
+            content: $icon-play;
+            position: absolute;
+            font-family: $icon-font-family;
+            color: #ffffff;
+            font-size: 32px;
+            top: 50%;
+            left: 50%;
+            margin-top: -16px;
+            margin-left: -12px;
+            z-index: 2;
+        }
+
+        &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: transparentize($color-black, .7);
+            @include transition(0.25s, linear);
+        }
+
+        video {
+            min-height: 94px;
+
+        }
+    }
+
+    .flex-direction-nav {
+
+        .flex-nav-prev {
+            left: -20px;
+        }
+        .flex-nav-next {
+            right: -20px;
+        }
+    }
+}
+
+.carousel-slider {
+
+    .news-slider-item {
+
+    }
+
+    .flex-direction-nav {
+
+        .flex-nav-prev {
+            left: -20px;
+        }
+        .flex-nav-next {
+            right: -20px;
+        }
+    }
+}

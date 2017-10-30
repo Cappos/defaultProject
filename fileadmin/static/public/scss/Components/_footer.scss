@@ -1,0 +1,29 @@
+footer {
+
+    .footer-top {
+        background: $color-red;
+
+
+        #{headings(1,6)} {
+
+        }
+
+        .footer-left {
+
+        }
+        .footer-center {
+
+        }
+
+
+        .footer-right {
+
+        }
+    }
+
+    .footer-bottom {
+        background: #333;
+        padding: 10px;
+
+    }
+}

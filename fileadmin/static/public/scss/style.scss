@@ -1,0 +1,28 @@
+@import "Components/_variable"; //include variables
+@import "Components/_grid"; //include grid
+@import "Components/_mixins"; //include mixin
+@import "Components/_global"; //include global style
+@import "Components/_typography"; //include table style
+@import "Components/_table"; //include typography style
+@import "../icon-fonts/_style"; //include icon font style
+@import "Components/_slider"; //include slider style
+@import "Components/_formElements"; //include form elements styles
+@import "Components/_selectTwo"; //include select2 styles
+@import "Components/_buttons"; //include button styles
+@import "Components/_header"; //include header style
+@import "Components/_footer"; //include footer style
+@import "Components/_navigation"; //include menu style
+@import "Components/_listView"; //include list view style
+@import "Components/_single"; //include single view style
+@import "Components/_accordion"; //include accordions style
+@import "Components/_aside"; //include aside style
+@import "Components/_parallax"; //include parallax style
+
+
+
+// Plugins
+@import "../scripts/js/plugins/swipebox/swipebox";
+
+/*include extra styling*/
+
+@import "custom";

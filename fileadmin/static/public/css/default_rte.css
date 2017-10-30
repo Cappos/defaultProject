@@ -1,0 +1,30 @@
+span.icon-mail, span.icon-phone{position: relative;  padding-left: 40px;}
+span.icon-mail:before, span.icon-phone:before{content:"";  width: 20px; height: 20px;  position: absolute; top:0px; left:0px; background:url(../img/icons.svg) no-repeat left -80px;}
+span.icon-mail:before {  background:url(../img/icons.svg) no-repeat left -120px;}
+
+/* these are for showing alignment in RTE on the backend */
+div.align-left, span.align-left, p.align-left, .align-left{ text-align: left; }
+div.align-center, span.align-center, p.align-center, .align-center { text-align: center; }
+div.align-right, span.align-right, p.align-right, .align-right { text-align: right; }
+div.align-justify, span.align-justify, p.align-justify, .align-justify { text-align: justify; }
+
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 20px;
+    padding: 10px 15px;
+    min-width: 124px;
+    text-align: center;
+    border: 2px solid #ea1c25;
+    font-size: 12px;
+    color: inherit;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+}
+.more{
+    font-size: 13px;
+    padding-right: 25px;
+    background: url(../img/more.svg) no-repeat right center;
+}

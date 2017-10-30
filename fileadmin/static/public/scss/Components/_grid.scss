@@ -1,0 +1,163 @@
+//RESET
+html {font-family: sans-serif; -ms-text-size-adjust: 100%;  -webkit-text-size-adjust: 100%;}
+body {margin: 0;}
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {display: block;}
+audio, canvas, progress, video {display: inline-block; vertical-align: baseline;}
+b, strong {font-weight: bold;}
+dfn {font-style: italic;}
+mark {background: #ff0; color: #000;}
+sub, sup {font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+img {border: 0;}
+svg:not(:root) {overflow: hidden;}
+hr {-webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; height: 0;}
+pre {overflow: auto;}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {-webkit-appearance: button; cursor: pointer;}
+button[disabled], html input[disabled] {cursor: default;}
+button::-moz-focus-inner, input::-moz-focus-inner {border: 0; padding: 0;}
+input {
+  line-height: normal;
+  &[type="checkbox"], [type="radio"] {
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0;
+  }
+  &[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {height: auto;}
+  &[type="search"] {-webkit-appearance: textfield; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box;}
+  &[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
+}
+textarea {overflow: auto;}
+table {border-collapse: collapse; border-spacing: 0;}
+td, th {padding: 0;}
+*, *:before, *:after {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+input, button, select, textarea {font-family: inherit; font-size: inherit; line-height: inherit;}
+figure {margin: 0;}
+img {vertical-align: middle;}
+hr {margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #c4c4c5;}
+
+// GRID GENERATE
+.row {
+  letter-spacing: -.32em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  display: block;
+  &.align-center { text-align: center; }
+  &.align-right  { text-align: right; }
+}
+
+[class*="col-"] {
+  letter-spacing: normal;
+  display: inline-block;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  position: relative;
+  float: none;
+  text-align: left;
+  vertical-align: top;
+  box-sizing: border-box;
+  &.align-baseline {vertical-align: baseline;}
+  .row {margin: auto (-$gutter); width: auto; max-width: initial;}
+}
+
+@function column ($i) {
+  @return ($i / $col-count) * 100%;
+}
+
+@for $n from 1 through $col-count {
+  .col-xs-#{$n} { width: column($n); }
+  .col-xs-offset-#{$n} { margin-left: column($n); }
+  .col-xs-push-#{$n}   { margin-right: column($n); }
+}
+
+@media (min-width: $size-ss) {
+  @for $i from 1 through $col-count {
+    .col-ss-#{$i} { width: column($i); }
+  }
+  @for $i from 0 through $col-count {
+    .col-ss-offset-#{$i}  { margin-left: column($i); }
+  }
+  @for $i from 0 through $col-count {
+    .col-ss-push-#{$i} { margin-right: column($i); }
+  }
+  .hide-ss {display: none !important;}
+  .show-ss {display: block !important;}
+  .nospace-ss {padding: 0!important;}
+}
+
+@media (min-width: $size-s) {
+  @for $i from 1 through $col-count {
+    .col-s-#{$i} { width: column($i); }
+  }
+  @for $i from 0 through $col-count {
+    .col-s-offset-#{$i}  { margin-left: column($i); }
+  }
+  @for $i from 0 through $col-count {
+    .col-s-push-#{$i} { margin-right: column($i); }
+  }
+  .hide-s {display: none !important;}
+  .show-s {display: block !important;}
+  .nospace-s {padding: 0!important;}
+}
+
+@media (min-width: $size-sm) {
+  @for $i from 1 through $col-count {
+    .col-sm-#{$i} { width: column($i); }
+  }
+  @for $i from 0 through $col-count {
+    .col-sm-offset-#{$i}  { margin-left: column($i); }
+  }
+  @for $i from 0 through $col-count {
+    .col-sm-push-#{$i} { margin-right: column($i); }
+  }
+  .hide-sm {display: none !important;}
+  .show-sm {display: block !important;}
+  .nospace-sm {padding: 0!important;}
+}
+
+@media (min-width: $size-md) {
+  @for $i from 1 through $col-count {
+    .col-md-#{$i} { width: column($i); }
+  }
+  @for $i from 0 through $col-count {
+    .col-md-offset-#{$i}  { margin-left: column($i); }
+  }
+  @for $i from 0 through $col-count {
+    .col-md-push-#{$i} { margin-right: column($i); }
+  }
+  .hide-md {display: none !important;}
+  .show-md {display: block !important;}
+  .nospace-md {padding: 0!important;}
+}
+
+@media (min-width: $size-lg) {
+  @for $i from 1 through $col-count {
+    .col-lg-#{$i} { width: column($i); }
+  }
+  @for $i from 0 through $col-count {
+    .col-lg-offset-#{$i}  { margin-left: column($i); }
+  }
+  @for $i from 0 through $col-count {
+    .col-lg-push-#{$i} { margin-right: column($i); }
+  }
+  .hide-lg {display: none !important;}
+  .show-lg {display: block !important;}
+  .nospace-lg {padding: 0!important;}
+}
+
+// HELPER CLASS
+.clearfix:before,
+.clearfix:after {content: " "; display: table;}
+.clearfix:after {clear: both;}
+.pull-right {float: right !important;}
+.pull-left {float: left !important;}
+.hide {display: none !important;}
+.show {display: block !important;}
+.invisible {visibility: hidden;}
+.hidden {display: none !important;}
+.nospace {padding: 0!important;}
+.align-top {vertical-align: top !important;}
+.align-middle {vertical-align: middle !important;}
+.align-bottom {vertical-align: bottom !important;}
+.align-left {text-align: left !important;}
+.align-center {text-align: center !important;}
+.align-right {text-align: right !important;}

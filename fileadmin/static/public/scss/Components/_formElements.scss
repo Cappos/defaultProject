@@ -1,0 +1,252 @@
+.form-element {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-element-submit {
+    text-align: right;
+}
+
+.form-element-button {
+    text-align: right;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    display: none;
+}
+
+label {
+    @include label-default();
+    display: block;
+    margin-bottom: 5px;
+    &:hover {
+        color: $color-red;
+    }
+    &.error {
+        font-size: 12px;
+        position: absolute;
+        bottom: -25px;
+        right: 0;
+        color: red;
+    }
+    em {
+        display: inline;
+        color: $color-red;
+    }
+}
+
+.error {
+    label {
+        color: red !important;
+    }
+    input {
+        border: 1px solid red !important;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+input {
+    @include input-default();
+    width: 100%;
+    padding-left: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    &[type="text"], &[type="password"], &[type="email"], &[type="number"] {
+        height: 43px;
+        border: $default-border;
+        background: transparent;
+        display: block;
+        line-height: 43px;
+        border-radius: $border-radius;
+    }
+    &[type="radio"] {
+        display: none;
+        + label {
+
+            //noinspection CssUnknownTarget
+            background: url('/fileadmin/static/public/css/img/radio-btn.svg') no-repeat left 3px;
+            padding: 2px 25px;
+            font-size: 14px;
+            color: #333;
+        }
+        &:checked + label {
+            //noinspection CssUnknownTarget
+            background: url('/fileadmin/static/public/css/img/radio-btn-check.svg') no-repeat left 3px;
+            padding: 2px 25px;
+        }
+    }
+
+    &[type="checkbox"]:not(:checked),
+    &[type="checkbox"]:checked {
+        position: absolute;
+        left: -9999px;
+    }
+    &[type="checkbox"]:not(:checked) + label,
+    &[type="checkbox"]:checked + label {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        line-height: 1.71;
+        border: none;
+        font-size: 14px;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 3px;
+            width: 16px;
+            height: 16px;
+            border: $default-border;
+            background: transparent;
+            border-radius: 1px;
+        }
+        &:after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 11px;
+            left: 8px;
+            margin-top: -5px;
+            margin-left: -5px;
+            background: $color-red;
+            transition: all 0.2s;
+        }
+    }
+    &[type="checkbox"]:not(:checked) + label:after {
+        opacity: 0;
+        transform: scale(0);
+    }
+    &[type="checkbox"]:checked + label:after {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    &[type='file'] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+}
+
+button, input {
+    &[type='submit'], &[type='button'] {
+        min-width: 140px;
+        height: 43px;
+        background: $color-red;
+        color: $input-submit-font-color;
+        border: none;
+        font-size: $input-submit-font-size;
+        font-weight: $input-submit-font-weight;
+        text-align: left;
+        line-height: 43px;
+        padding: 0 24px;
+        cursor: pointer;
+        border-radius: $border-radius;
+        &:hover {
+            background: $color-black;
+            color: #fff;
+            border: none;
+        }
+        [class*="icon-"] {
+            vertical-align: middle;
+            margin-left: 32px;
+            font-size: inherit;
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+.file-upload-input {
+    width: 100%;
+    max-width: calc(100% - 136px);
+    color: #000;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 0 10px;
+    border: none;
+    float: none;
+    display: inline-block !important;
+    vertical-align: top;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.file-upload-button {
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 134px;
+    line-height: 43px;
+    border: none;
+    padding: 0 16px;
+    font-size: 14px;
+    color: #fff;
+    background: $color-red;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+}
+
+textarea {
+    @include input-default();
+    min-height: 215px;
+    width: 100%;
+    border: $default-border;
+    border-radius: $border-radius;
+    background: transparent;
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-left: 10px;
+    padding-top: 10px;
+    resize: vertical;
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    color: $label-font-color;
+    font-size: 14px;
+}
+
+:-moz-placeholder {
+    color: $label-font-color;
+    font-size: 14px;
+}
+
+::-moz-placeholder {
+    color: $label-font-color;
+    font-size: 14px;
+}
+
+:-ms-input-placeholder {
+    color: $label-font-color;
+    font-size: 14px;
+}

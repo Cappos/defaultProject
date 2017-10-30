@@ -1,0 +1,76 @@
+.select2-container, .select2-container .select2-choice {width: 100%; min-width: 100px;}
+.select2-container a {font-size: 14px; font-weight: normal;}
+.select2-container .select2-choice {
+  height: 43px;
+  line-height: 43px;
+  padding: 0 12px;
+  font-family: $primary-font;
+  font-weight: $font-weight-normal;
+  color: $select-font-color;
+  border: 1px solid #fff;
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  border-radius: $border-radius;
+}
+.select2-container .select2-choice, .select2-dropdown-open .select2-choice, .select2-dropdown-open.select2-drop-above .select2-choice, .select2-dropdown-open.select2-drop-above .select2-choices {
+  border: $default-border;
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  border-radius: $border-radius;
+  background: $select-background-color;
+  background-image: none;
+  /*max-width: 364px;*/
+}
+.select2-container, .select2-container .select2-choice:focus, .select2-dropdown-open .select2-choice:focus, .select2-container-active .select2-choice {
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.select2-drop, .select2-drop-active {border: none; border-top: none;}
+.select2-container .select2-choice .select2-arrow {
+  /*height: 100%;*/
+  text-align: center;
+  //noinspection CssUnknownTarget
+  background: url('/fileadmin/static/public/css/img/arrow-down-gray.svg') no-repeat center;
+  width: 16px;
+  height: 10px;
+  border: none;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  margin-top: -4px ;
+}
+.select2-results .select2-highlighted {background: $color-red; color: $select-background-color;}
+ul.select2-results {
+  padding-left: 0;
+  margin: 0;
+  background: $select-background-color;
+  border: $default-border;
+}
+ul.select2-results li {
+  list-style: none;
+  padding: 15px 10px;
+  margin:0;
+}
+ul.select2-results li:before {display: none;}
+.select2-results .select2-result-label {padding: 0;}
+.divider {margin: 40px 0;}
+
+.select2-search {
+  padding: 0;
+  input {
+    line-height: 26px;
+    height: 26px;
+    margin: 0;
+    border-bottom: none;
+  }
+}
+.select2-focusser,
+.select2-search,
+.select2-search input {
+  display: none !important;
+}
+
+

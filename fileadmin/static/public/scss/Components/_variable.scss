@@ -1,0 +1,66 @@
+// GRID
+$col-count: 12 !default;
+$gutter:    12px !default;
+$size-ss:    480px !default;
+$size-s:    660px !default;
+$size-sm:   768px !default;
+$size-md:   992px !default;
+$size-lg:   1200px !default;
+
+
+// FONTS
+$font-weight-normal: normal;
+$font-weight-bold: 700;
+$default-font-size: 14px;
+$default-line-height: 1.2;
+
+$primary-font: 'Roboto', sans-serif;;
+$primary-font-weight: $font-weight-normal;
+
+$headings-font: 'Roboto', sans-serif;
+$headings-font-weight: 700;
+
+$subHeadings-font: 'Bitter', serif;
+$subHeadings-font-weight: 400;
+
+// ICON FONT
+$icon-font-family: lamello;
+
+// COLORS
+$color-red: #ac1e36;
+$color-black: #000000;
+$color-grayDark: #535353;
+$color-gray: #b8b8b8;
+$color-grayLight: #f9f9f9;
+$color-green: #45ab42;
+$color-blue: #63cbf2;
+$color-orange: #faa734;
+
+// TEXT COLORS FOR P
+$paragraph-color: #535353;
+
+
+//BORDERS
+$default-border: 1px solid $color-gray;
+$border-radius: 5px;
+
+//INPUT
+$input-font-color: #535353;
+$input-background-color: transparent;
+$input-font-size: 14px;
+$input-font-weight: $font-weight-normal;
+
+$input-submit-font-size: 14px;
+$input-submit-font-color: #ffffff;
+$input-submit-font-color-hover: #ffffff;
+$input-submit-font-weight: $font-weight-normal;
+
+
+//LABEL
+$label-font-color: $paragraph-color;
+$label-font-size: 14px;
+$label-font-weight: $font-weight-normal;
+
+//SELECT 2
+$select-font-color: $paragraph-color;
+$select-background-color: #ffffff;

@@ -1,0 +1,116 @@
+// TEXT DEFAULT
+@mixin text-default(){
+  font-size: $default-font-size;
+  color: $paragraph-color;
+  font-weight: $font-weight-normal;
+}
+
+// INPUT DEFAULT
+@mixin input-default($color: $input-font-color, $font: $primary-font, $size: $label-font-size, $background: $input-background-color, $weight: $input-font-weight, $border: 0){
+  color: $color;
+  font-family: $font;
+  background: $background;
+  font-weight: $weight;
+  font-size: $size;
+  border: $border;
+}
+
+// LABEL DEFAULT
+@mixin label-default($color: $label-font-color, $font: $primary-font, $size: $label-font-size, $weight: $label-font-weight, $line-height: 1.2){
+  color: $color;
+  font-family: $font;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+}
+
+// HEADERS
+@function headings($from:1, $to:6) {
+  @if $from == $to {
+    @return 'h#{$from}';
+  } @else {
+    @return 'h#{$from},' + headings($from+1, $to);
+  }
+}
+
+// BREAK POINTS
+@mixin maxWidth($screen){
+  @media all and (max-width:($screen)){
+    @content;
+  }
+}
+
+@mixin minWidth($screen){
+  @media all and (min-width:($screen)){
+    @content;
+  }
+}
+
+
+// ANIMATION
+@mixin animation ($delay, $duration, $animation) {
+  -webkit-animation-delay: $delay;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-name: $animation;
+  -webkit-animation-fill-mode: forwards;
+
+  -moz-animation-delay: $delay;
+  -moz-animation-duration: $duration;
+  -moz-animation-name: $animation;
+  -moz-animation-fill-mode: forwards;
+
+  -o-animation-delay: $delay;
+  -o-animation-duration: $duration;
+  -o-animation-name: $animation;
+  -o-animation-fill-mode: forwards;
+
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-fill-mode: forwards;
+}
+
+// ANIMATION KEYFRAMES
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+// TRANSITIONS
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+// TRANSFORM
+@mixin transform($args) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+
+// TRANSLATION
+@mixin translate($pos) {
+  -webkit-transform: translate($pos);
+  -moz-transform: translate($pos);
+  -ms-transform: translate($pos);
+  -o-transform: translate($pos);
+  transform: translate($pos);
+}
